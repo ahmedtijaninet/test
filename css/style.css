@@ -82,6 +82,11 @@ a:hover {
     text-decoration: none;
 }
 
+.logo img {
+    max-height: 40px;
+    width: auto;
+}
+
 .main-nav ul {
     display: flex;
     gap: 30px;

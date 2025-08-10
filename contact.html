@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez l'équipe de SELYN. Remplissez notre formulaire de contact, trouvez notre adresse, ou appelez-nous pour toute question.">
+    <title>Contact - SELYN</title>
+    <link rel="icon" href="assets/images/SELYN.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/SELYN.svg" alt="SELYN Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="selyn-conseil.html" data-i18n="nav_conseil">SELYN Conseil</a></li>
+                <li><a href="selyn-suite.html" data-i18n="nav_suite">SELYN Suite</a></li>
+                <li><a href="selyn-space.html" data-i18n="nav_space">SELYN Space</a></li>
+                <li><a href="selyn-communaute.html" data-i18n="nav_community">Communauté SELYN</a></li>
+                <li><a href="offers-pricing.html" data-i18n="nav_pricing">Offres & Tarifs</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="lang-select">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contactez-Nous</h1>
+                <p>Nous sommes là pour répondre à vos questions.</p>
+            </div>
+        </section>
+        <section class="container page-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-primary">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="assets/images/SELYN.svg" alt="SELYN Logo" class="footer-logo">
+                <p>&copy; 2024 SELYN. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

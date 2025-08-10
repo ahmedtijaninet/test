@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 28px;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        fill: #1E3A8A;
+      }
+    </style>
+  </defs>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="cls-1">SELYN</text>
+</svg>

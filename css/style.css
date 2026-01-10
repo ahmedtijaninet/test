@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+/* --- CSS Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+ul {
+    list-style: none;
+}
+/* --- End Reset --- */
+
+:root {
+    --primary-color: #00365F; /* Dark Blue */
+    --accent-color: #278EC7; /* Light Blue */
+    --light-gray: #E6E6E6;
+    --medium-gray: #B3B3B3;
+    --font-title: 'Archivo', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--light-gray);
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header */
+.site-header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--font-title);
+    font-size: 24px;
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--light-gray);
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    text-decoration: none;
+}
+
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-gray);
+    margin: 5px 0;
+}
+
+/* Footer */
+.site-footer {
+    padding: 40px 0;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--medium-gray);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--light-gray);
+    border-color: var(--light-gray);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Info Card Placeholder */
+.info-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* --- Home Page --- */
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.mockup-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--medium-gray);
+    font-size: 1.2rem;
+}
+
+/* Intro Section */
+section {
+    padding: 80px 0;
+}
+
+.intro {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.large-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--medium-gray);
+    text-align: center;
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* CTA Block */
+.cta-block {
+    background-color: var(--accent-color);
+}
+
+.cta-block h2 {
+    color: #fff;
+}
+
+.cta-block .btn-primary {
+    background-color: #fff;
+    color: var(--accent-color);
+    border-color: #fff;
+}
+
+.cta-block .btn-primary:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* --- General Page Styles --- */
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* --- Produits & Solutions Page --- */
+
+.product-section .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.product-section h2 {
+    text-align: left;
+    font-size: 2.2rem;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.product-content.reverse {
+    grid-template-columns: 1fr 1fr; /* Explicitly set for ordering */
+}
+
+.product-content.reverse .product-text {
+    order: 2;
+}
+.product-content.reverse .product-image {
+    order: 1;
+}
+
+.product-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.product-text ul li {
+    margin-bottom: 10px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--medium-gray);
+}
+
+.alt-bg {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.schema-section {
+    background-color: var(--primary-color);
+}
+
+.schema-placeholder {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 40px;
+    border: 2px dashed var(--accent-color);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: var(--font-title);
+}
+
+/* --- Qui Sommes-Nous Page --- */
+
+.about-intro-section h2 {
+    text-align: left;
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 20px auto;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: var(--medium-gray);
+}
+
+/* --- Tarifs Page --- */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.pricing-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card.featured {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+/* --- Responsiveness --- */
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Mobile Header & Nav */
+    .main-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .main-nav a {
+        font-size: 1.5rem;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    .nav-toggle:checked ~ .main-nav {
+        transform: translateX(0);
+    }
+
+    .nav-toggle:checked ~ .mobile-nav-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav-toggle:checked ~ .mobile-nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .mobile-nav-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+
+    /* General Layouts */
+    .hero .container,
+    .product-content,
+    .product-content.reverse {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-content.reverse .product-text,
+    .product-content.reverse .product-image {
+        order: 0; /* Reset order for stacking */
+    }
+
+    .product-section h2,
+    .about-intro-section h2 {
+        text-align: center;
+    }
+
+    .features-grid,
+    .two-col-grid,
+    .values-grid,
+    .team-grid,
+    .pricing-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .page-title,
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1); /* Disable scaling on mobile */
+    }
+}
+
+/* --- Contact Page --- */
+
+.contact-section .container {
+    padding-top: 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--medium-gray);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-gray);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(39, 142, 199, 0.5);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--medium-gray);
+    margin-top: 30px;
+}
+
+.price {
+    font-size: 3rem;
+    font-family: var(--font-title);
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    font-family: var(--font-body);
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+.consulting-offer {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.consulting-offer h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
